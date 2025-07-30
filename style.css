@@ -1,0 +1,517 @@
+/* Main body layout */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  font-family: Arial, sans-serif;
+  color: white;
+  /* Removed display: flex to fix header visibility */
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Container holds image and thought - both centered */
+.container {
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers items horizontally */
+  justify-content: center;
+}
+
+/* Image styles */
+.photo {
+  animation: zoomIn 2s ease-out forwards;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+}
+
+/* Thought centered below image */
+.thought {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 1.5s forwards;
+  color: #e0e0e0;
+  max-width: 700px;
+}
+
+.author {
+  margin-top: 10px;
+  color: #f39c12;
+  font-style: italic;
+  display: block;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.main-name {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.navbar a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #f39c12;
+  color: #121212;
+}
+
+/* About Section */
+.about {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.2);
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  white-space: pre-line;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 10px 10px;
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+.footer a {
+  color: #f39c12;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  z-index: -1;
+  animation: bgmove 15s infinite alternate;
+}
+
+@keyframes bgmove {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-name {
+  font-size: 36px;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover, .navbar .active {
+  color: #0f75bd;
+}
+
+.work {
+  background: rgba(255, 255, 255, 0.9);  /* Transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  color: #000; /* Text black so it’s visible */
+}
+
+.work h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.job-box, .skills-box {
+  background: #fff;
+  border-left: 6px solid #0f75bd;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  animation: fadein 1s ease forwards;
+}
+
+.skills-box ul {
+  columns: 2;
+  padding-left: 20px;
+}
+
+.job-box ul, .skills-box ul {
+  list-style: disc;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.job-box h3, .skills-box h3 {
+  margin-top: 0;
+  color: #0f75bd;
+}
+
+.slide-in {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #333;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.footer a {
+  color: #0db5ff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Lightbox Styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10000;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff4444;
+}
+
+/* Contact Section Layout */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1 1 45%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left h2,
+.contact-right h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.contact-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-left li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-left a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Get in Touch Form */
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact-right button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-right button:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  margin-top: 50px;
+  text-align: center;
+  border-top: 5px solid #0077cc;
+}
+
+.footer a {
+  color: #4db8ff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+/* ===== Navbar Styling Start ===== */
+.navbar {
+  background-color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #0077cc;
+  border-radius: 5px;
+}
+/* ===== Navbar Styling End ===== */
+
