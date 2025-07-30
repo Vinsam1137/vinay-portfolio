@@ -3,45 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Vinay Jain</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Vinay Jain | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+    .glow {
+      text-shadow: 0 0 10px #00ffffaa, 0 0 20px #00ffff55;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <h1 class="main-name">Vinay Jain</h1>
-      <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="work.html">Work</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="bg-black/30 backdrop-blur-md fixed w-full top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-cyan-400 glow">Vinay Jain</h1>
+      <ul class="flex space-x-6 text-white font-semibold">
+        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
+        <li><a href="#goals" class="hover:text-cyan-400 transition">Goals</a></li>
+        <li><a href="#hobbies" class="hover:text-cyan-400 transition">Hobbies</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- ✅ Added missing About Me heading -->
-    <h1 class="page-title">About Me</h1>
+  <!-- Hero Section -->
+  <section class="pt-32 text-center fade-in">
+    <h2 class="text-4xl font-bold text-cyan-400 glow mb-2">Hello, I'm Vinay Jain</h2>
+    <p class="text-xl text-gray-300 italic max-w-2xl mx-auto">“In a world full of chaos, I bring process and precision.”</p>
+    <p class="text-sm text-gray-400 mt-1">– My mission is to turn complexity into clarity through smart systems and structured thinking.</p>
+  </section>
 
-    <section class="about">
-      <h2>Work Summary</h2>
-      <p>
-        Dynamic ERP Consultant & IT Administrator with 5+ years of experience leading full-cycle ERP implementations at Nway Technologies. Proven expertise in configuring and deploying modules such as HR, Tender, Correspondence, Store, Purchase, Machinery, Production, Accounts, and MIS, Project management, Admin, Employee Section. Ensuring seamless integration and process optimization across departments.
-        <br><br>
-        Skilled in HR system setup, payroll structuring, attendance tracking, and salary processing for large infrastructure companies. Adept at cross-functional coordination, user training, client consulting, and data management.
-        <br><br>
-        Also experienced in managing IT infrastructure including hardware/software installation, network and email setup, data backups, and troubleshooting. Strong background in administrative operations, asset management, vendor coordination, and documentation. Committed to streamlining organizational workflows and driving successful ERP adoption.
+  <!-- About Section -->
+  <section id="about" class="mt-16 px-6">
+    <div class="max-w-5xl mx-auto bg-white/10 rounded-2xl backdrop-blur-md p-8 shadow-lg fade-in">
+      <h3 class="text-3xl font-bold text-cyan-300 mb-4 glow">🧒 About Me</h3>
+      <p class="text-gray-200 leading-relaxed">
+        I was born on 16th July 2001 in Dewas, Madhya Pradesh — a passionate learner and detail-driven professional on a mission to bring clarity and efficiency into business systems.
+        I completed my 10th in 2017 with 84% and 12th in 2019 from Saraswati Vidya Mandir, Dewas. Graduated in B.Com (C.A.) from Devi Ahilya Bai Holkar University in 2022 with 78%.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <p>📞 +91-9827374009 | 📧 <a href="mailto:vj66716@gmail.com">vj66716@gmail.com</a></p>
-      <p>
-        <a href="https://www.instagram.com/vinayyy_jain_1137?igsh=MW5ieHRmMG01eXV1Zw==" target="_blank">Instagram</a> |
-        <a href="https://www.linkedin.com/in/vinay-jain-00a873257" target="_blank">LinkedIn</a> |
-        <a href="https://wa.me/919827374009" target="_blank">WhatsApp</a>
-      </p>
-    </footer>
-  </div>
+  <!-- Skills -->
+  <section id="skills" class="mt-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold text-cyan-300 mb-6 glow">💻 Technical Skills</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white/10 p-4 rounded-xl text-center shadow hover:scale-105 transition">
+          <p>📊 Advanced Excel</p>
+          <small>Dashboards, Pivots, Lookup</small>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl text-center shadow hover:scale-105 transition">
+          <p>📘 Tally ERP 9 with GST</p>
+          <small>Accounting, Inventory</small>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl text-center shadow hover:scale-105 transition">
+          <p>📎 MS Office</p>
+          <small>Word, Excel, PPT, Outlook</small>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl text-center shadow hover:scale-105 transition">
+          <p>🖥️ ERP Systems</p>
+          <small>Master Creation, Reports</small>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl text-center shadow hover:scale-105 transition">
+          <p>🛠️ Networking</p>
+          <small>Basics & Maintenance</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Goals -->
+  <section id="goals" class="mt-16 px-6">
+    <div class="max-w-5xl mx-auto bg-white/10 p-8 rounded-2xl backdrop-blur-md fade-in">
+      <h3 class="text-3xl font-bold text-cyan-300 mb-4 glow">🎯 Life Goals</h3>
+      <ul class="space-y-3 text-gray-200 list-disc list-inside">
+        <li>Become a recognized ERP expert in infrastructure & construction.</li>
+        <li>Lead digital transformation projects for smarter business operations.</li>
+        <li>Mentor and build a strong ERP team.</li>
+        <li>Stay updated with modern ERP tools and trends.</li>
+        <li>Help small businesses grow with efficient systems.</li>
+        <li>Become a successful person who empowers others.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Hobbies -->
+  <section id="hobbies" class="mt-16 px-6 mb-16">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold text-cyan-300 mb-6 glow">🏏 My Hobbies</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-white/10 rounded-xl p-4 shadow hover:scale-105 transition">🏏 Cricket</div>
+        <div class="bg-white/10 rounded-xl p-4 shadow hover:scale-105 transition">⚽ Football</div>
+        <div class="bg-white/10 rounded-xl p-4 shadow hover:scale-105 transition">🎧 Music</div>
+        <div class="bg-white/10 rounded-xl p-4 shadow hover:scale-105 transition">📚 Reading</div>
+        <div class="bg-white/10 rounded-xl p-4 shadow hover:scale-105 transition">🌍 Travelling</div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
